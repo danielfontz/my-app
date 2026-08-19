@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Pressable, Image, TouchableOpacity } from 'reac
 export default function App() {
   return (
     <View style={styles.container}>
-      <Image source={require("./assets/icon.png")} style={{ width: 120, height: 120 }} />
+      <Image source={require("./src/assets/icon.png")} style={{ width: 120, height: 120 }} />
       <Text style={styles.title}>App Title</Text>
       <View style={styles.btnWrapper}>
         <Pressable onPress={() => console.log("Pressable")}>
