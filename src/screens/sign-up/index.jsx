@@ -9,8 +9,12 @@ import {
   Image,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { useNavigation } from "@react-navigation/native";
 
-export default function Login() {
+export default function SignUp() {
+
+  const navigation = useNavigation()
+
   return (
     <LinearGradient
       colors={["#EBC894", "#B49EF4"]}
@@ -81,7 +85,7 @@ export default function Login() {
           style={{ flexDirection: "row", gap: 6, justifyContent: "center" }}
         >
           <Text style={styles.normalText}>Já possui um conta?</Text>
-          <Pressable>
+          <Pressable onPress={() => navigation.navigate('SignIn')}>
             <Text
               style={{
                 fontSize: 12,

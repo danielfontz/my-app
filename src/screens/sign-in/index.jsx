@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Text,
   TextInput,
@@ -10,8 +9,12 @@ import {
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Checkbox } from "expo-checkbox";
+import { useNavigation } from "@react-navigation/native";
 
-export default function Login() {
+export default function SignIn() {
+
+  const navigation = useNavigation()
+
   return (
     <LinearGradient
       colors={["#EBC894", "#B49EF4"]}
@@ -56,7 +59,7 @@ export default function Login() {
               ></Checkbox>
               <Text style={styles.normalText}>Lembrar-me o acesso</Text>
             </View>
-            <Pressable>
+            <Pressable onPress={() => navigation.navigate('ForgotPassword')}>
               <Text
                 style={{
                   fontSize: 12,
@@ -118,7 +121,7 @@ export default function Login() {
           style={{ flexDirection: "row", gap: 6, justifyContent: "center" }}
         >
           <Text style={styles.normalText}>Novo por aqui?</Text>
-          <Pressable>
+          <Pressable onPress={() => navigation.navigate('SignUp')}>
             <Text
               style={{
                 fontSize: 12,

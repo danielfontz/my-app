@@ -12,7 +12,7 @@ import {
   LinearGradient,
 } from "expo-linear-gradient";
 
-export default function Login() {
+export default function ForgotPassword({ navigation }) {
   return (
     <LinearGradient
       colors={['#EBC894', '#B49EF4']}
