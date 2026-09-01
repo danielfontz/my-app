@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { FPassword, SignIn, SignUp } from "@screens/"
+import DetailsModal from './src/components/modal';
 
 const Stack = createNativeStackNavigator()
 
@@ -13,6 +14,13 @@ const RootStack = () => {
       <Stack.Screen name="SignIn" component={SignIn} />
       <Stack.Screen name="SignUp" component={SignUp} />
       <Stack.Screen name="ForgotPassword" component={FPassword} />
+      <Stack.Group screenOptions={{ 
+        presentation: "transparentModal", animation: "slide_from_bottom" }}>
+        <Stack.Screen
+          name='DetailsModal' 
+          component={DetailsModal} 
+          options={{ headerShown: false }} />
+      </Stack.Group>
     </Stack.Navigator>
   )
 }

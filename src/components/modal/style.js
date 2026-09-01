@@ -15,6 +15,13 @@ const Container = styled.View`
     justify-content: center;
     align-items: center;
 `
+
+const IconCircle = styled.View`
+    width: 42px;
+    heighh: 42px;
+    border-radius: 42px;
+    background-color: green;
+`
 const Title = styled.Text``
 const Description = styled.Text``
 const CloseBtn = styled.TouchableOpacity``

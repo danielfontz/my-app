@@ -11,7 +11,8 @@ const DetailsModal = () => {
                 <DM.Title>Title</DM.Title>
                 <DM.Description>DMescription</DM.Description>
                 <DM.CloseBtn onPress={() => navigation.goBack()}>
-                    <DM.CloseBtnText>Close</DM.CloseBtnText>
+                    <FontAwesome6 name="xmark">
+                    </FontAwesome6>
                 </DM.CloseBtn>
             </DM.Container>
         </DM.Overlay>

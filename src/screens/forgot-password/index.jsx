@@ -1,5 +1,8 @@
 import { useState } from "react";
+import { useNavigation } from "@react-navigation/native"
 import {
+  Btn,
+  BtnTitle,
   Text,
   TextInput,
   View,
@@ -59,6 +62,10 @@ export default function ForgotPassword({ navigation }) {
               <Text style={{fontSize: 12, fontWeight: 600, lineHeight: '140%', color: '#4D81E7', alignSelf: 'flex-end',}}>Crie sua conta</Text>
             </Pressable>
         </View>
+        <Btn 
+                onPress={() => navigation.navigate("DetailsModal")}>
+                <BtnTitle>Details Modal</BtnTitle>
+            </Btn>
       </View>
     </LinearGradient>
   );
