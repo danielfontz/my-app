@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, Pressable, TouchableOpacity } from 'reac
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { FPassword, SignIn, SignUp } from "./src/screens"
+import { FPassword, SignIn, SignUp } from "@screens/"
 
 const Stack = createNativeStackNavigator()
 
